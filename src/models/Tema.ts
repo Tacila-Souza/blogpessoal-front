@@ -2,6 +2,6 @@ import type Postagem from "./Postagem";
 
 export default interface Tema {
   id: number;
-  descrocao: string;
+  descricao: string;
   postagem?: Postagem[] | null;
 }
