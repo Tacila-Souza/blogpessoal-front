@@ -48,9 +48,9 @@ function FormPostagem() {
       }
   }
 
-  async function buscarTemas(id: string) {
+  async function buscarTemas() {
     try {
-      await buscar(`/temas/${id}`, setTemas, {
+      await buscar(`/temas/`, setTemas, {
           headers: { Authorization: token }
         })
       } catch (error: any) {
@@ -186,7 +186,7 @@ function FormPostagem() {
             <p>Tema da Postagem</p>
 
             <select name="tema" id="tema" className='border p-2 border-slate-800 rounded'
-              onChange={(e) => buscarPostagemPorId(e.currentTarget.value)}>
+              onChange={(e) => buscarTemaPorId(e.currentTarget.value)}>
 
               <option value="" selected disabled>Selecione um Tema</option>
 
