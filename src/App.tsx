@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { AuthProvider } from './contexts/AuthContext';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";
 import Cadastro from './pages/cadastro/Cadastro';
@@ -22,6 +25,7 @@ function App() {
   return (
     <>
     <AuthProvider>
+      <ToastContainer />
       <BrowserRouter>
 
         <Navbar/>
